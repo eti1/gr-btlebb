@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<block>
+  <name>BTLE Decoder</name>
+  <key>btlebb_decoder</key>
+  <category>[btlebb]</category>
+  <import>import btlebb</import>
+  <make>btlebb.decoder($channel_num,$debug)</make>
+
+  <param>
+    <name>Channel num</name>
+    <key>channel_num</key>
+    <value>37</value>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Enable logging</name>
+    <key>debug</key>
+    <value>False</value>
+    <type>bool</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+
+</block>

@@ -54,10 +54,16 @@ static void crc_init(void)
 	}
 }
 
+
+static int btlebb_init_done = 0;
 void btlebb_init(void)
 {
-	crc_init();
-	whiten_init();
+	if (!btlebb_init_done)
+	{
+		btlebb_init_done = 1;
+		crc_init();
+		whiten_init();
+	}
 }
 
 uint8_t btlebb_whiten(uint8_t seed, uint8_t *buf, unsigned len)

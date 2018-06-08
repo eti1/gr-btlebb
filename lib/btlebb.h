@@ -32,6 +32,7 @@ void btlebb_init(void);
    Returns next seed */
 uint8_t btlebb_whiten(uint8_t seed, uint8_t *buf, unsigned len);
 
+/* Comput crc for the pdu of an advertising channel */
 uint32_t btlebb_calccrc(const uint8_t *buf, unsigned len);
 
 /* Detect preamble in symbol (binary) stream, returns offset or -1, fills phdr and err */
